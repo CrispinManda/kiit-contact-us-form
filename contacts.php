@@ -18,18 +18,7 @@
 <body>
 
 <?php
-$servername = "localhost"; // Your database server name
-$username = "root"; // Your database username
-$password = ""; // Your database password
-$dbname = "Karen"; // Your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php'; // Include database connection
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $conn->real_escape_string($_POST['name']);
@@ -38,17 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO contacts (name, email, message) VALUES ('$name', '$email', '$message')";
 
-
-
-
-
     if ($conn->query($sql) === TRUE) {
         echo "<div class='alert alert-success'>New record created successfully</div>";
     } else {
         echo "<div class='alert alert-danger'>Error: " . $sql . "<br>" . $conn->error . "</div>";
     }
-
-    $conn->close();
 }
 ?>
 
@@ -69,11 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <!-- Link to Admin Area -->
+    <a href="admin.php" class="btn btn-secondary mt-3">View Contact Records</a>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
