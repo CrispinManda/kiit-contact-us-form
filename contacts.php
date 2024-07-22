@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            padding: 50px;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
+<?php include 'header.php'; ?>
+
 
 <?php
 include 'db.php'; // Include database connection
@@ -34,6 +18,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+
+    <style>
+        body {
+            padding: 50px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+
+
 
 <div class="container form-container">
     <h2>Contact Us</h2>
@@ -57,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a href="admin.php" class="btn btn-secondary mt-3">View Contact Records</a>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <?php include 'footer.php'; ?>
+
 </body>
 </html>
