@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $hashed_password)) {
             $_SESSION['user_id'] = $id;
             $_SESSION['user_name'] = $name;
-            header("Location: welcome.php");
+            header("Location: welcome");
         } else {
             header("Location: index.php?error=Invalid email or password");
         }

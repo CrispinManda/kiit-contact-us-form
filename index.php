@@ -23,7 +23,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-    <p class="mt-3">Don't have an account? <a href="register.php">Register</a></p>
+    <p class="mt-3">Don't have an account? <a href="register ">Register</a></p>
 </div>
 
 
@@ -32,8 +32,3 @@
  <?php include 'footer.php'; ?>
 
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

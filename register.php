@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<?php include 'header.php'; ?>
+
 <div class="container mt-5  ">
     <h2>Register</h2>
     <?php
@@ -15,7 +8,7 @@
     }
     if (isset($_GET['success'])) {
 
-        echo '<div class="alert alert-success">Registration successful! You can now <a href="index.php">login</a>.</div>';
+        echo '<div class="alert alert-success">Registration successful! You can now <a href="index">login</a>.</div>';
     }
 
    //header("Location: index.php");
@@ -40,5 +33,6 @@
         <button type="submit" class="btn btn-primary">Register</button>
     </form>
 </div>
-</body>
-</html>
+
+ <?php include 'footer.php'; ?>
+

@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Area - Contacts</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<?php include 'header.php'; ?>
+
     <style>
         body {
             padding: 50px;
@@ -14,8 +9,7 @@
             margin: auto;
         }
     </style>
-</head>
-<body>
+
 
 <?php
 include 'db.php'; // Include database connection
@@ -57,7 +51,5 @@ $result = $conn->query($sql);
     <?php $conn->close(); ?>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+ <?php include 'footer.php'; ?>
+
